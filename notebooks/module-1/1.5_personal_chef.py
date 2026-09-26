@@ -28,7 +28,7 @@ Return recipe suggestions and eventually the recipe instructions to the user, if
 from langchain.agents import create_agent
 
 agent = create_agent(
-    model="gpt-5-nano",
+    model="groq:openai/gpt-oss-20b",
     tools=[web_search],
-    system_prompt=system_prompt
+    system_prompt=system_prompt,
 )
