@@ -93,7 +93,7 @@ def dynamic_prompt_func(request: ModelRequest) -> str:
 
 
 agent = create_agent(
-        "gpt-5-nano",
+    "groq:openai/gpt-oss-20b",
         tools=[authenticate, check_inbox, send_email],
         state_schema=AuthenticatedState,
         context_schema=EmailContext,
